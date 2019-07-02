@@ -1,6 +1,6 @@
 .button {
-  background-color: #e0e0e0;
-  border: 0.5px solid lightgray;
+  background-color: #ededed;
+  border: 0.5px solid #e6e6e6;
   text-align: center;
   font-size: 1.5rem;
   width: 25%;
@@ -14,7 +14,11 @@
 }
 
 .primary-color {
+  background-color: #35ff30;
+  color: #fff;
 }
 
-.primary-color {
+.secondary-color {
+  background-color: #e0e0e0;
+  color: #2194ff;
 }
