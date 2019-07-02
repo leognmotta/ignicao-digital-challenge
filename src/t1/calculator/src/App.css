@@ -1,0 +1,6 @@
+.calc {
+  max-width: 360px;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column;
+}
