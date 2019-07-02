@@ -14,9 +14,7 @@ export default class App extends Component {
     operation: null
   };
 
-  handleClick = buttonName => {
-    this.setState(calc(this.state, buttonName));
-  };
+  handleClick = buttonName => this.setState(calc(this.state, buttonName));
 
   render() {
     const { nextValue, total } = this.state;

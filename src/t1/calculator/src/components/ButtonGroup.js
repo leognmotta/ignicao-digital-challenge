@@ -36,7 +36,7 @@ export default function ButtonGroup({ handleClick }) {
 
       <tr className="row">
         <Button name="0" handleClick={handleClick} wide />
-        <Button name="," handleClick={handleClick} />
+        <Button name="." handleClick={handleClick} />
         <Button name="=" handleClick={handleClick} primary />
       </tr>
     </tbody>
