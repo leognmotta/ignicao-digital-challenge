@@ -1,5 +1,5 @@
-const numberTwo = null;
-let operation = '+';
-const two = numberTwo || (operation === '/' || operation === 'x' ? '1' : '0');
+const num = '0';
 
-console.log(two);
+let num2 = Number(num);
+
+console.log(num2);
