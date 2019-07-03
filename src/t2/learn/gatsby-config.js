@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Learn`,
     description: `Lorem learn page`,
-    author: `Leo Motta`,
+    author: `@leomotta121`,
   },
   plugins: [
     `gatsby-plugin-sass`,

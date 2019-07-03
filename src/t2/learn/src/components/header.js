@@ -3,17 +3,20 @@ import React from "react"
 import { Link } from "gatsby"
 
 import logo from "../images/Logo.png"
+import "../scss/global-style.scss"
 import "../scss/header.scss"
 
 const Header = () => (
-  <header>
-    <nav className="nav-bar">
-      <Link>Navigation here</Link>
-      <Link>About us</Link>
+  <header className="nav-bar">
+    <nav>
+      <Link to="/">Navigation here</Link>
+      <Link to="/something">About us</Link>
     </nav>
 
     <div className="logo-container">
-      <img className="logo" src={logo} />
+      <div className="inner">
+        <img className="logo" src={logo} alt="Learn company logo" />
+      </div>
     </div>
   </header>
 )

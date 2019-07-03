@@ -1,11 +1,30 @@
-@import "./global-style.scss";
+@import "./vars.scss";
 
 .nav-bar {
   margin: 0 auto;
-  max-width: 960px;
-  padding: 1rem;
+  max-width: 1160px;
+  padding: 0 0.4rem;
   padding-top: 0;
   margin-top: 2rem;
+}
+
+.logo {
+  display: block;
+  width: 20%;
+  min-width: 160px;
+  margin: 1.5rem auto;
+}
+
+.logo-container {
+  margin: 0.5rem 0;
+  padding: 3px 0;
+  border-top: 6px solid $header_black;
+  border-bottom: 2px solid $header_black;
+
+  .inner {
+    border-top: 2px solid $header_black;
+    border-bottom: 6px solid $header_black;
+  }
 }
 
 a {

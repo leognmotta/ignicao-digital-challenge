@@ -9,15 +9,20 @@
 
 body,
 html {
-  font-family: Georgia;
+  font-family: $font;
   font-size: 18px;
   color: $text_color;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
 }
 
+h1,
 h2 {
   font-size: 24px;
-  font-family: myriad-pro, sans-serif;
+  font-family: $heading_font;
   text-transform: uppercase;
+}
+
+p {
+  font-style: italic;
 }
