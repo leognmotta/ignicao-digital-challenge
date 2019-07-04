@@ -51,13 +51,13 @@ class IndexPage extends React.Component {
           <section>
             <h1>Our latest work</h1>
             {this.state.work.map(text => (
-              <p>{text}</p>
+              <p key={text}>{text}</p>
             ))}
           </section>
           <section>
             <h2>About us</h2>
             {this.state.about.map(text => (
-              <p>{text}</p>
+              <p key={text}>{text}</p>
             ))}
           </section>
 

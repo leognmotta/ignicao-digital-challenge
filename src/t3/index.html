@@ -40,8 +40,10 @@
         bottom: -15px;
         border-radius: 100%;
 
-        -webkit-animation: move 5s linear infinite;
-        animation: move 5s linear infinite;
+        -webkit-animation: move 5s linear infinite, change-color 5s linear infinite,
+          mutate 5s linear infinite;
+        animation: move 5s linear infinite, change-color 5s linear infinite,
+          mutate 5s linear infinite;
       }
 
       @-webkit-keyframes move {
@@ -49,143 +51,172 @@
         100% {
           left: 34px;
           bottom: -15px;
-          background-color: #ee0;
-          border-radius: 100%;
-        }
-
-        16% {
-          background-color: #ee0;
         }
 
         16.66% {
           left: 235px;
           bottom: -15px;
-          background-color: #0f0;
-        }
-
-        32.7% {
-          background-color: #0f0;
         }
 
         33.32% {
           left: 235px;
           bottom: 185px;
-          background-color: #00f;
-        }
-
-        49.38% {
-          background-color: #00f;
-          border-radius: 100%;
         }
 
         49.98% {
           left: 435px;
           bottom: 185px;
-          background-color: #fff;
-          border-radius: 0;
-        }
-
-        66% {
-          background-color: #fff;
         }
 
         66.64% {
           left: 235px;
           bottom: 185px;
-          background-color: #00f;
-        }
-
-        82.7% {
-          background-color: #00f;
         }
 
         83.3% {
           left: 235px;
           bottom: -15px;
-          background-color: #0f0;
-        }
-
-        99.4% {
-          background-color: #0f0;
-          border-radius: 0;
-        }
-
-        100% {
-          left: 35px;
-          bottom: -15px;
-          background-color: #ee0;
         }
       }
+
       @keyframes move {
         0%,
         100% {
           left: 34px;
           bottom: -15px;
-          background-color: #ee0;
-          border-radius: 100%;
-        }
-
-        16% {
-          background-color: #ee0;
         }
 
         16.66% {
           left: 235px;
           bottom: -15px;
-          background-color: #0f0;
-        }
-
-        32.7% {
-          background-color: #0f0;
         }
 
         33.32% {
           left: 235px;
           bottom: 185px;
-          background-color: #00f;
-        }
-
-        49.38% {
-          background-color: #00f;
-          border-radius: 100%;
         }
 
         49.98% {
           left: 435px;
           bottom: 185px;
-          background-color: #fff;
-          border-radius: 0;
-        }
-
-        66% {
-          background-color: #fff;
         }
 
         66.64% {
           left: 235px;
           bottom: 185px;
-          background-color: #00f;
-        }
-
-        82.7% {
-          background-color: #00f;
         }
 
         83.3% {
           left: 235px;
           bottom: -15px;
-          background-color: #0f0;
         }
+      }
 
-        99.4% {
-          background-color: #0f0;
-          border-radius: 0;
-        }
-
+      @-webkit-keyframes change-color {
+        0%,
         100% {
-          left: 35px;
-          bottom: -15px;
           background-color: #ee0;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+
+        16.66% {
+          background-color: #0f0;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+
+        33.32% {
+          background-color: #00f;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+
+        49.98% {
+          background-color: #fff;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+
+        66.64% {
+          background-color: #00f;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+
+        83.3% {
+          background-color: #0f0;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+      }
+
+      @keyframes change-color {
+        0%,
+        100% {
+          background-color: #ee0;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+
+        16.66% {
+          background-color: #0f0;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+
+        33.32% {
+          background-color: #00f;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+
+        49.98% {
+          background-color: #fff;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+
+        66.64% {
+          background-color: #00f;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+
+        83.3% {
+          background-color: #0f0;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+      }
+
+      @-webkit-keyframes mutate {
+        0%,
+        100% {
+          border-radius: 100%;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+
+        49.98% {
+          border-radius: 0px;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+      }
+
+      @keyframes mutate {
+        0%,
+        100% {
+          border-radius: 100%;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+        }
+
+        49.98% {
+          border-radius: 0px;
+          -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
         }
       }
     </style>
