@@ -11,6 +11,9 @@ import "../scss/index.scss"
 
 const IndexPage = () => (
   <Layout>
+    {/* An example on how to pass values on SEO component, 
+    it is a alway of adding meta components to out static pages. Notice that
+    meta needs to be an array of objects. 🚀 */}
     <SEO
       title="Learn"
       description="Website for Ignição Digital"

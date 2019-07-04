@@ -1,44 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-	<meta charset="UTF-8">
-	<meta name="code" content="SW1hZ2luZSB1bWEgbm92YSBoaXN0w7NyaWEgcGFyYSBzdWEgdmlkYSBlIGFjcmVkaXRlIG5lbGEuICJQYXVsbyBDb2VsaG8i">
-	<title>Questionário</title>
-</head>
-<body>
-	<h1>Questionário</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="code"
+      content="SW1hZ2luZSB1bWEgbm92YSBoaXN0w7NyaWEgcGFyYSBzdWEgdmlkYSBlIGFjcmVkaXRlIG5lbGEuICJQYXVsbyBDb2VsaG8i"
+    />
+    <title>Questionário</title>
 
-	<ul>
-		<li>
-			Liste erros que você tenha encontrado no código disponibilizado para cada teste.
-			<ul>
-				<li>R:</li>
-			</ul>
-		</li>
-		<li>
-			Liste melhorias e possíveis correções para o código disponibilizado nos testes
-			<ul>
-				<li>R:</li>
-			</ul>
-		</li>
-		<li>
-			O que é CSS? Responda com suas palavras.
-			<ul>
-				<li>R:</li>
-			</ul>
-		</li>
-		<li>
-			*Bônus: Sinta-se livre para estilizar este questionário para que seja lido da forma que você julga mais bonita.
-		</li>
-		<li>
-			*Bônus 2: Estilize a calculadora a seu gosto.
-		</li>
-		<li>
-			*Bônus 3: Essa página esconde algum segredo?
-			<ul>
-				<li>R:</li>
-			</ul>
-		</li>
-	</ul>
-</body>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        font-family: 'PT Mono', monospace;
+        font-size: 20px;
+        text-rendering: optimizeLegibility !important;
+        -webkit-font-smoothing: antialiased !important;
+      }
+      body {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      li {
+        margin: 1rem 0;
+      }
+
+      ul li {
+        list-style: none;
+      }
+
+      ol li,
+      .question {
+        list-style: decimal;
+      }
+
+      .answer {
+        font-style: italic;
+        font-size: 18px;
+      }
+
+      footer {
+        text-align: center;
+        margin: 2rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Questionário</h1>
+
+    <ul>
+      <li class="question">
+        Liste erros que você tenha encontrado no código disponibilizado para cada teste.
+        <ul>
+          <li>
+            R:
+            <ol class="answer">
+              <li>
+                Foi identificado na pasta t1, no teste de calculadora no "index.html", a propriedade
+                "border", a qual não é recomendada, melhor que se use CSS para este tipo de tarefa.
+              </li>
+              <li>
+                Ainda na pasta t1, a tag de "style" está dentro do corpo "body", o que não é
+                permitido, a mesma deve ser usada dentro do "head".
+              </li>
+              <li>
+                Já na pasta t3 no arquivo "index.html" o primeiro erro identificado é que a tag
+                "body" não foi fechada corretamente. Eu fechei, para que pudesse prosseguir com o
+                teste.
+              </li>
+              <li>
+                Ainda na pasta t3 no arquivo "index.html", recomenda-se que todas as "sections"
+                tenham algum "heading" como as tags "h2~h6".
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+      <li class="question">
+        Liste melhorias e possíveis correções para o código disponibilizado nos testes
+        <ul>
+          <li>
+            R:
+            <ol class="answer">
+              <li>
+                Para o teste da calculadora, particularmente não gosto de estruturar o layout como
+                "tables". Acredito que "tables" tenham seu próprio uso, com as tags "tbody, thead,
+                tfoot" que tem seus propósitos, porém mantive a estrutura que foi entregue, fazendo
+                apenas o uso do "tbody", uma adaptação necessária para o react.
+              </li>
+              <li>
+                Para o teste do layout, acharia interessante receber as fontes.
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+      <li class="question">
+        O que é CSS? Responda com suas palavras.
+        <ul>
+          <li>
+            R:
+            <ul class="answer">
+              <li>
+                CSS é uma abreviação de "Cascading Style Sheets", uma tecnologia da
+                <a href="https://www.w3.org/" target="_blank">World Wide Web</a>, mais conhecida
+                como "<a href="https://www.w3.org/" target="_blank">W3</a>" e popularmente
+                confundida com a "<a href="https://www.w3schools.com/" target="_blank">w3 schools</a
+                >", que é independente da
+                <a href="https://www.w3.org/" target="_blank">World Wide Web</a>. É uma liguagem de
+                estilização para "markup languages" tal como o HTML, o CSS veio como uma forma de
+                separar apresentação e conteúdo.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="question">
+        *Bônus: Sinta-se livre para estilizar este questionário para que seja lido da forma que você
+        julga mais bonita.
+      </li>
+      <li class="question">
+        *Bônus 2: Estilize a calculadora a seu gosto.
+      </li>
+      <li class="question">
+        *Bônus 3: Essa página esconde algum segredo?
+        <ul>
+          <li>
+            R:
+            <ul class="answer">
+              <li class="answer">
+                Esta é uma pagina 100% válida, não possui nenhum erro de código, no "head" na tag de
+                "meta" onde se encontra o name "code" com um "content" de uma string aleatória
+                parece não ser algo válido, o código por si só é valido porém até onde pesquisei não
+                é reconhecido por nenhuma "Search Engine", sendo assim, não traria nenhum benefício
+                para página.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <footer>
+      Por <a href="https://github.com/leomotta121" target="_blank">Leonardo Motta</a> 🚀
+    </footer>
+  </body>
 </html>
