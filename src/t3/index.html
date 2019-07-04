@@ -1,61 +1,215 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-	<meta charset="UTF-8">
-	<title>Animação</title>
-	<style>
-	.section-main{
-		width: 500px;
-		margin: 0 auto;
-		position: relative;
-	}
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animação</title>
+    <style>
+      .section-main {
+        width: 500px;
+        margin: 0 auto;
+        position: relative;
+      }
 
-	.map-box{
-		width: 200px;
-		height: 200px;
-		position: relative;
-		margin: 0 auto;
-		margin-top: 200px;
-		left: -100px;
-		border-bottom: 3px solid #e00;
-		border-right: 3px solid #e00;
-	}
+      .map-box {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 200px;
+        left: -100px;
+        border-bottom: 3px solid #e00;
+        border-right: 3px solid #e00;
+      }
 
-	.map-box:before{
-		content: "";
-		width: 200px;
-		right: -200px;
-		position: absolute;
-		border-bottom: 3px solid #e00;
-	}
+      .map-box:before {
+        content: '';
+        width: 200px;
+        right: -200px;
+        position: absolute;
+        border-bottom: 3px solid #e00;
+      }
 
-	.box-move{
-		width: 30px;
-		height: 30px;
-		background-color: #ee0;
-		position: absolute;
-		left: 10px;
-		border: 1px solid #333;
-		left: 34px;
-		bottom: -15px;
-		border-radius: 100%;
-	}
-	</style>
-</head>
-<body>
-	<section class="section-main">
-		<div class="map-box"></div>
-		<div class="box-move"></div>
-	</section>
-	<script>
-	console.log('Faça com que o box-move percorrer as 4 arestas das bordas vermelhas \n com as seguintes regras:');
+      .box-move {
+        width: 30px;
+        height: 30px;
+        background-color: #ee0;
+        position: absolute;
+        left: 10px;
+        border: 1px solid #333;
+        left: 34px;
+        bottom: -15px;
+        border-radius: 100%;
 
-	console.log('Quando o box-move chergar a aresta B ficará da cor #0F0, quando chegar na aresta C ficará da cor #00F \n no final do percurso o elemento se tornará um quadrado e ficará da cor #FFF; ');
+        -webkit-animation: move 5s linear infinite;
+        animation: move 5s linear infinite;
+      }
 
-	console.log('Após isso, o box-move deve voltar ao seu ponto de origem seguindo as mesmas regras ao contrário e apenas \n voltar a se tornar um circulo quando chegar ao ponto inicial. ');
-	console.log('A animação deve ser infinita \n');
-	console.log('Deve ser utilizado apenas css para fazer esta animação.\n\n');
-	console.log('Dica: keyframes');
-	</script>
-</body
+      @-webkit-keyframes move {
+        0%,
+        100% {
+          left: 34px;
+          bottom: -15px;
+          background-color: #ee0;
+          border-radius: 100%;
+        }
+
+        16% {
+          background-color: #ee0;
+        }
+
+        16.66% {
+          left: 235px;
+          bottom: -15px;
+          background-color: #0f0;
+        }
+
+        32.7% {
+          background-color: #0f0;
+        }
+
+        33.32% {
+          left: 235px;
+          bottom: 185px;
+          background-color: #00f;
+        }
+
+        49.38% {
+          background-color: #00f;
+          border-radius: 100%;
+        }
+
+        49.98% {
+          left: 435px;
+          bottom: 185px;
+          background-color: #fff;
+          border-radius: 0;
+        }
+
+        66% {
+          background-color: #fff;
+        }
+
+        66.64% {
+          left: 235px;
+          bottom: 185px;
+          background-color: #00f;
+        }
+
+        82.7% {
+          background-color: #00f;
+        }
+
+        83.3% {
+          left: 235px;
+          bottom: -15px;
+          background-color: #0f0;
+        }
+
+        99.4% {
+          background-color: #0f0;
+          border-radius: 0;
+        }
+
+        100% {
+          left: 35px;
+          bottom: -15px;
+          background-color: #ee0;
+        }
+      }
+      @keyframes move {
+        0%,
+        100% {
+          left: 34px;
+          bottom: -15px;
+          background-color: #ee0;
+          border-radius: 100%;
+        }
+
+        16% {
+          background-color: #ee0;
+        }
+
+        16.66% {
+          left: 235px;
+          bottom: -15px;
+          background-color: #0f0;
+        }
+
+        32.7% {
+          background-color: #0f0;
+        }
+
+        33.32% {
+          left: 235px;
+          bottom: 185px;
+          background-color: #00f;
+        }
+
+        49.38% {
+          background-color: #00f;
+          border-radius: 100%;
+        }
+
+        49.98% {
+          left: 435px;
+          bottom: 185px;
+          background-color: #fff;
+          border-radius: 0;
+        }
+
+        66% {
+          background-color: #fff;
+        }
+
+        66.64% {
+          left: 235px;
+          bottom: 185px;
+          background-color: #00f;
+        }
+
+        82.7% {
+          background-color: #00f;
+        }
+
+        83.3% {
+          left: 235px;
+          bottom: -15px;
+          background-color: #0f0;
+        }
+
+        99.4% {
+          background-color: #0f0;
+          border-radius: 0;
+        }
+
+        100% {
+          left: 35px;
+          bottom: -15px;
+          background-color: #ee0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section-main">
+      <div class="map-box"></div>
+      <div class="box-move"></div>
+    </section>
+    <script>
+      console.log(
+        'Faça com que o box-move percorrer as 4 arestas das bordas vermelhas \n com as seguintes regras:'
+      );
+
+      console.log(
+        'Quando o box-move chergar a aresta B ficará da cor #0F0, quando chegar na aresta C ficará da cor #00F \n no final do percurso o elemento se tornará um quadrado e ficará da cor #FFF; '
+      );
+
+      console.log(
+        'Após isso, o box-move deve voltar ao seu ponto de origem seguindo as mesmas regras ao contrário e apenas \n voltar a se tornar um circulo quando chegar ao ponto inicial. '
+      );
+      console.log('A animação deve ser infinita \n');
+      console.log('Deve ser utilizado apenas css para fazer esta animação.\n\n');
+      console.log('Dica: keyframes');
+    </script>
+  </body>
 </html>
