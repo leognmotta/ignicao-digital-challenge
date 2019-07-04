@@ -1,0 +1,28 @@
+@import "./vars.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+body,
+html {
+  font-family: $font;
+  font-size: 18px;
+  color: $text_color;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+h1,
+h2 {
+  font-size: 24px;
+  font-family: $heading_font;
+  text-transform: uppercase;
+}
+
+p {
+  font-style: italic;
+}
